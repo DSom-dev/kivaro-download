@@ -10,7 +10,7 @@ Track your workouts, keep your progress in one place, and build consistency as y
 
 Latest version: v1.0.0
 
-"⬇️ Download KIVARO v1.0.0 APK" (./KIVARO-v1.0.0.apk)
+[⬇️ Download KIVARO v1.0.0 APK](KIVARO-v1.0.0.apk)
 
 Installation
 
