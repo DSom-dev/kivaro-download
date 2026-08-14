@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KIVARO | Fitness Progression</title>
+
+    <meta name="description"
+          content="KIVARO turns your fitness journey into progression. Track workouts, earn XP, and climb the ranks.">
+
+    <meta name="theme-color" content="#0D131F">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #0D131F;
+            color: #f5f7fa;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 720px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 84px;
+            height: 84px;
+            margin: 0 auto 28px;
+            border-radius: 22px;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: clamp(48px, 12vw, 82px);
+            letter-spacing: 8px;
+            margin: 0 0 12px;
+            font-weight: 800;
+        }
+
+        .tagline {
+            font-size: clamp(20px, 4vw, 28px);
+            margin: 0 auto 16px;
+            font-weight: 600;
+        }
+
+        .description {
+            max-width: 560px;
+            margin: 0 auto 36px;
+            color: #9ca7b5;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .download {
+            display: inline-block;
+            padding: 17px 32px;
+            border-radius: 12px;
+            background: #10B981;
+            color: #06130f;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 800;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .download:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .meta {
+            margin-top: 22px;
+            color: #6f7b8a;
+            font-size: 14px;
+        }
+
+        .features {
+            margin-top: 58px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .feature {
+            padding: 20px;
+            border: 1px solid #202b3b;
+            border-radius: 14px;
+            background: #111a28;
+            color: #c5ced9;
+        }
+
+        @media (max-width: 520px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+            margin-top: 48px;
+            color: #596575;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <img
+            class="logo"
+            src="kivaro-icon.png"
+            alt="KIVARO">
+
+        <h1>KIVARO</h1>
+
+        <p class="tagline">
+            Your fitness journey, turned into progression.
+        </p>
+
+        <p class="description">
+            Track your workouts, build consistency, earn XP,
+            and climb the ranks. KIVARO combines fitness tracking
+            with an RPG-style progression system.
+        </p>
+
+        <a
+            class="download"
+            href="KIVARO-v1.0.0.apk"
+            download>
+            DOWNLOAD KIVARO
+        </a>
+
+        <div class="meta">
+            Version 1.0.0 · Android · Free
+        </div>
+
+        <section class="features">
+            <div class="feature">💪 Workout Tracking</div>
+            <div class="feature">⚡ XP & Rank Progression</div>
+            <div class="feature">📊 Progress Tracking</div>
+            <div class="feature">🔥 Workout History</div>
+        </section>
+
+        <footer>
+            © 2026 KIVARO
+        </footer>
+
+    </main>
+
+</body>
+</html>
