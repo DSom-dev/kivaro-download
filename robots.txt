@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dsom-dev.github.io/kivaro-download/sitemap.xml

@@ -4,60 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>KIVARO | Fitness Progression</title>
+    <title>KIVARO | Free Fitness RPG Workout Tracker</title>
 
-    <meta name="description"
-          content="KIVARO turns your fitness journey into progression. Track workouts, earn XP, and climb the ranks.">
+    <meta
+        name="description"
+        content="KIVARO is a free fitness RPG workout tracker for Android. Track workouts, earn XP, build consistency, and climb the ranks."
+    >
+
+    <meta name="robots" content="index, follow">
 
     <meta name="theme-color" content="#0D131F">
+
+    <link rel="icon" type="image/png" href="kivaro-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KIVARO | Fitness RPG Workout Tracker">
+    <meta
+        property="og:description"
+        content="Track workouts, earn XP, build consistency, and climb the ranks with KIVARO."
+    >
+    <meta property="og:image" content="kivaro-icon.png">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="KIVARO | Fitness RPG Workout Tracker">
+    <meta
+        name="twitter:description"
+        content="Track workouts, earn XP, build consistency, and climb the ranks."
+    >
+    <meta name="twitter:image" content="kivaro-icon.png">
 
     <style>
         * {
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             min-height: 100vh;
-            background: #0D131F;
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(16, 185, 129, 0.10),
+                    transparent 38%
+                ),
+                #0D131F;
             color: #f5f7fa;
             font-family: Arial, Helvetica, sans-serif;
             display: flex;
-            align-items: center;
             justify-content: center;
-            padding: 24px;
+            padding: 48px 24px;
         }
 
         .container {
             width: 100%;
-            max-width: 720px;
+            max-width: 760px;
             text-align: center;
         }
 
         .logo {
-            width: 84px;
-            height: 84px;
-            margin: 0 auto 28px;
+            width: 92px;
+            height: 92px;
+            margin: 12px auto 28px;
             border-radius: 22px;
             object-fit: contain;
+        }
+
+        .eyebrow {
+            color: #10B981;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
         }
 
         h1 {
             font-size: clamp(48px, 12vw, 82px);
             letter-spacing: 8px;
-            margin: 0 0 12px;
+            margin: 0 0 14px;
             font-weight: 800;
         }
 
         .tagline {
             font-size: clamp(20px, 4vw, 28px);
-            margin: 0 auto 16px;
+            margin: 0 auto 18px;
             font-weight: 600;
+            line-height: 1.3;
         }
 
         .description {
-            max-width: 560px;
-            margin: 0 auto 36px;
+            max-width: 590px;
+            margin: 0 auto 34px;
             color: #9ca7b5;
             font-size: 17px;
             line-height: 1.7;
@@ -65,14 +108,16 @@
 
         .download {
             display: inline-block;
-            padding: 17px 32px;
+            padding: 17px 34px;
             border-radius: 12px;
             background: #10B981;
             color: #06130f;
             text-decoration: none;
             font-size: 17px;
             font-weight: 800;
-            transition: transform 0.2s ease, opacity 0.2s ease;
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease;
         }
 
         .download:hover {
@@ -80,8 +125,12 @@
             opacity: 0.9;
         }
 
+        .download:active {
+            transform: translateY(0);
+        }
+
         .meta {
-            margin-top: 22px;
+            margin-top: 18px;
             color: #6f7b8a;
             font-size: 14px;
         }
@@ -91,26 +140,63 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 14px;
+            text-align: left;
         }
 
         .feature {
-            padding: 20px;
+            padding: 22px;
             border: 1px solid #202b3b;
             border-radius: 14px;
-            background: #111a28;
+            background: rgba(17, 26, 40, 0.85);
             color: #c5ced9;
         }
 
-        @media (max-width: 520px) {
-            .features {
-                grid-template-columns: 1fr;
-            }
+        .feature strong {
+            display: block;
+            color: #f5f7fa;
+            margin-bottom: 6px;
+        }
+
+        .feature span {
+            color: #7f8b9b;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .note {
+            margin: 34px auto 0;
+            max-width: 560px;
+            padding: 16px 18px;
+            border-radius: 12px;
+            background: #111a28;
+            color: #7f8b9b;
+            font-size: 13px;
+            line-height: 1.6;
         }
 
         footer {
             margin-top: 48px;
             color: #596575;
             font-size: 13px;
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 32px 18px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            h1 {
+                letter-spacing: 6px;
+            }
         }
     </style>
 </head>
@@ -122,7 +208,14 @@
         <img
             class="logo"
             src="kivaro-icon.png"
-            alt="KIVARO">
+            alt="KIVARO fitness app logo"
+            width="92"
+            height="92"
+        >
+
+        <div class="eyebrow">
+            Free for Android
+        </div>
 
         <h1>KIVARO</h1>
 
@@ -133,7 +226,8 @@
         <p class="description">
             Track your workouts, build consistency, earn XP,
             and climb the ranks. KIVARO combines fitness tracking
-            with an RPG-style progression system.
+            with an RPG-style progression system designed to make
+            every workout feel like progress.
         </p>
 
         <a
@@ -148,11 +242,42 @@
         </div>
 
         <section class="features">
-            <div class="feature">💪 Workout Tracking</div>
-            <div class="feature">⚡ XP & Rank Progression</div>
-            <div class="feature">📊 Progress Tracking</div>
-            <div class="feature">🔥 Workout History</div>
+
+            <div class="feature">
+                <strong>💪 Workout Tracking</strong>
+                <span>
+                    Record workouts and keep your training history organized.
+                </span>
+            </div>
+
+            <div class="feature">
+                <strong>⚡ XP & Rank Progression</strong>
+                <span>
+                    Earn XP from your training and climb through the KIVARO ranks.
+                </span>
+            </div>
+
+            <div class="feature">
+                <strong>📊 Progress Tracking</strong>
+                <span>
+                    See your training progress and stay focused on improvement.
+                </span>
+            </div>
+
+            <div class="feature">
+                <strong>🔥 Workout History</strong>
+                <span>
+                    Keep a record of your completed sessions and consistency.
+                </span>
+            </div>
+
         </section>
+
+        <div class="note">
+            KIVARO is currently in its early release stage.
+            The Android app is distributed directly through this website.
+            Feedback and bug reports are welcome.
+        </div>
 
         <footer>
             © 2026 KIVARO
