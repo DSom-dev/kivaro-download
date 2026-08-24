@@ -233,7 +233,7 @@
 
         <a
             class="download"
-            href="KIVARO-v1.0.0.apk"
+            href="KIVARO-v1.1.0.apk"
             download>
             DOWNLOAD KIVARO
         </a>
@@ -252,7 +252,7 @@
         </a>
 
         <div class="meta">
-            Version 1.0.0 · Android & iPhone · Free
+            Version 1.1.0 · Android & iPhone · Free
         </div>
          <div class="download-count">
          <span id="downloadCount">Loading...</span> downloads
@@ -326,7 +326,7 @@
 
         try {
             const response = await fetch(
-               "https://api.github.com/repos/DSom-dev/kivaro-download/releases/tags/v1.0.0"
+               "https://api.github.com/repos/DSom-dev/kivaro-download/releases/tags/v1.1.0"
             );
 
             if (!response.ok) {
@@ -336,7 +336,7 @@
             const release = await response.json();
 
             const apk = release.assets.find(
-                asset => asset.name === "KIVARO-v1.0.0.apk"
+                asset => asset.name === "KIVARO-v1.1.0.apk"
             );
 
             if (!apk) {
